@@ -20,10 +20,21 @@ const journalists = [
     info: "نس الشريف، صحفي فلسطيني من شمال قطاع غزة وُلد عام 1996، درس الإذاعة والتلفزيون في جامعة الأقصى. بدأ مسيرته الإعلامية متطوعًا ثم التحق بقناة الجزيرة مراسلًا ميدانيًا. أُصيب خلال تغطيته مسيرة عام 2018 وتلقى تهديدات من الاحتلال بسبب عمله الصحفي. في ديسمبر 2023، استُشهد والده في قصف إسرائيلي استهدف منزلهم بمخيم جباليا."
   }
 ];
-
+const styles={
+    header: {
+      color: "#333",
+      marginBottom: "30px",
+      marginTop: "30px",
+      fontWeight: "bold",
+      borderBottom: "2px solid #ddd",
+      paddingBottom: "10px",
+      textAlign: "right"
+    },
+};
 const ArticlesGrid = () => {
   return (
     <div className="container">
+    <h2 style={styles.header}>مقالات</h2>
       <div className="row">
         {journalists.map((j, index) => (
           <ArticlesSection
